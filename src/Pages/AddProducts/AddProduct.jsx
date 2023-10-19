@@ -1,3 +1,4 @@
+import Swal from 'sweetalert2'
 const AddProduct = () => {
     const handleAddProduct = event => {
         event.preventDefault();
@@ -21,7 +22,14 @@ const AddProduct = () => {
         })
         .then(res => res.json())
         .then(data => {
-          console.log(data)
+          console.log(data);
+          if(data.insertedId){
+            Swal.fire(
+              'Product Added Successfully!',
+              'Add another Product?',
+              'success'
+            )
+          }
         })
     }
   return (
