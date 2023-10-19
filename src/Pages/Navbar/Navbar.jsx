@@ -1,5 +1,7 @@
 import { Link, NavLink } from "react-router-dom";
-// import logo from "../../../assets/images/logo.png";
+import logo from "../../assets/images/Logo.png";
+import icon from "../../assets/images/icon.png";
+
 // import { FaUser } from 'react-icons/fa';
 // import { useContext } from "react";
 // import { AuthContext } from "../../../Firebase/AuthProvider";
@@ -58,8 +60,9 @@ const Navbar = () => {
             {navLinks}
           </ul>
         </div>
-        <div>
-            {/* <img className=" w-1/4" src={logo} alt="island-wedding-world" /> */}
+        <div className=" w-full flex items-center gap-2">
+            <img className=" rounded-full" src={icon} alt="" />
+            <h2 className=" text-xl font-bold">TechConnectPro</h2>
         </div>
         
       </div>

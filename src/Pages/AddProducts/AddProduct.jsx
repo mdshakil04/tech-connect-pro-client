@@ -11,18 +11,17 @@ const AddProduct = () => {
         const image = form.image.value;
         const newProduct = {name, brand, type, price, ratting, descriptions, image}
         console.log(newProduct);
-
     }
   return (
     <div >
-      <div className=" container bg-[#F4F3F0] mx-auto p-8 mt-8 rounded-xl">
+      <div className=" container bg-slate-800 text-white mx-auto p-8 my-8 rounded-xl">
             <h2 className="text-4xl text-center font-mono">Add New Product</h2>
            
-        <form onSubmit={handleAddProduct}>
-          <div className=" grid md:grid-cols-2 gap-4">
+        <form onSubmit={handleAddProduct} className="">
+          <div className=" grid md:grid-cols-2  gap-4">
             <div className="form-control">
               <label className="label">
-                <span className="label-text">Name</span>
+                <span className="label-text text-xl text-white">Name</span>
               </label>
               <input
                 name="name"
@@ -34,7 +33,7 @@ const AddProduct = () => {
             </div>
             <div className="form-control">
               <label className="label">
-                <span className="label-text">Brand Name</span>
+                <span className="label-text text-xl text-white">Brand Name</span>
               </label>
               <input
                 name='brand'
@@ -46,7 +45,7 @@ const AddProduct = () => {
             </div>
             <div className="form-control">
               <label className="label">
-                <span className="label-text">Type</span>
+                <span className="label-text text-xl text-white">Type</span>
               </label>
               <input
                 name='type'
@@ -58,7 +57,7 @@ const AddProduct = () => {
             </div>
             <div className="form-control">
               <label className="label">
-                <span className="label-text">Price</span>
+                <span className="label-text text-xl text-white">Price</span>
               </label>
               <input
                 name='price'
@@ -70,7 +69,7 @@ const AddProduct = () => {
             </div>
             <div className="form-control">
               <label className="label">
-                <span className="label-text">Ratting</span>
+                <span className="label-text text-xl text-white">Ratting</span>
               </label>
               <input
                 name='ratting'
@@ -82,7 +81,7 @@ const AddProduct = () => {
             </div>
             <div className="form-control">
               <label className="label">
-                <span className="label-text">Descriptions</span>
+                <span className="label-text text-xl text-white">Descriptions</span>
               </label>
               <input
                 name="descriptions"
@@ -96,7 +95,7 @@ const AddProduct = () => {
           <div>
             <div className="form-control mb-4">
               <label className="label">
-                <span className="label-text">Image</span>
+                <span className="label-text text-xl text-white">Image</span>
               </label>
               <input
                 name="image"
@@ -106,7 +105,7 @@ const AddProduct = () => {
                 required
               />
             </div>
-                <input className="btn bg-[#D2B48C] font-mono border-none btn-success w-full" type="submit" value="Add Product" />
+                <input className="btn font-mono bg-gradient-to-r from-cyan-500 to-blue-500 text-white text-xl border-none btn-success mt-4 w-full" type="submit" value="Add Product" />
           </div>
         </form>
       </div>

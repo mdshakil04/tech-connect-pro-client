@@ -3,33 +3,7 @@ import { Link, useLocation, useNavigate } from "react-router-dom";
 // import { AuthContext } from "../../../Firebase/AuthProvider";
 
 const Login = () => {
-//   const { signIn } = useContext(AuthContext);
-//   const location = useLocation();
-//   const navigate = useNavigate();
 
-//   const handleLogin = e =>{
-//     e.preventDefault();
-//     // console.log(e.currentTarget)
-//     const form = new FormData(e.currentTarget);
-//     const email = form.get('email');
-//     const password = form.get('password');
-//     console.log(email, password);
-//     signIn(email,password)
-//     .then(result =>{
-//       console.log(result.user)
-//       navigate(location?.state ? location.state : '/');
-//     })
-//     .catch(error=>{
-//       console.error(error)
-//     })
-//   }
-//     const { googleSignIn } = useContext(AuthContext);
-//     const handleGoogleSignIn = () =>{
-//         googleSignIn().then(result => {
-//             console.log(result.user)
-//             navigate(location?.state ? location.state : '/');
-//         })
-//     }
   return (
     <div className="hero min-h-screen bg-base-200">
       <div className="hero-content flex-col lg:flex-row-reverse">
