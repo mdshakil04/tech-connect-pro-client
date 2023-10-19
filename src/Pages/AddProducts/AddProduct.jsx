@@ -11,11 +11,23 @@ const AddProduct = () => {
         const image = form.image.value;
         const newProduct = {name, brand, type, price, ratting, descriptions, image}
         console.log(newProduct);
+        // send data to the server
+        fetch('http://localhost:5000/product', {
+          method: 'POST',
+          headers:{
+            'content-type':'application/json'
+          },
+          body: JSON.stringify(newProduct)
+        })
+        .then(res => res.json())
+        .then(data => {
+          console.log(data)
+        })
     }
   return (
     <div >
-      <div className=" container bg-slate-800 text-white mx-auto p-8 my-8 rounded-xl">
-            <h2 className="text-4xl text-center font-mono">Add New Product</h2>
+      <div className=" container bg-slate-800 mx-auto p-8 my-8 rounded-xl">
+            <h2 className="text-4xl text-center text-white font-mono">Add New Product</h2>
            
         <form onSubmit={handleAddProduct} className="">
           <div className=" grid md:grid-cols-2  gap-4">
