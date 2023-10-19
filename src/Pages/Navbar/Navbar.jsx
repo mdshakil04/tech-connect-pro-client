@@ -1,5 +1,5 @@
 import { Link, NavLink } from "react-router-dom";
-import logo from "../../assets/images/Logo.png";
+import logo2 from "../../assets/images/logo2.png";
 import icon from "../../assets/images/icon.png";
 
 // import { FaUser } from 'react-icons/fa';
@@ -60,9 +60,9 @@ const Navbar = () => {
             {navLinks}
           </ul>
         </div>
-        <div className=" w-full flex items-center gap-2">
-            <img className=" rounded-full" src={icon} alt="" />
-            <h2 className=" text-xl font-bold">TechConnectPro</h2>
+        <div className=" flex items-center gap-2">
+            <img className=" w-1/2 rounded-xl" src={logo2} alt="" />
+            {/* <h2 className=" text-xl font-bold">TechConnectPro</h2> */}
         </div>
         
       </div>
