@@ -1,8 +1,10 @@
+import { Link } from "react-router-dom";
 
-const Brand = ({brand}) => {
-    const {image, name} = brand;
-    return (
-        <div className=" mt-8 ">
+const Brand = ({ brand }) => {
+  const { image, name } = brand;
+  return (
+    <Link to='/products'>
+      <div className=" mt-8 ">
         <div className=" hero-content flex-col lg:flex-row gap-8  rounded-lg ">
           <div className=" w-1/2 rounded-lg shadow-2xl p-8">
             <img src={image} className=" " />
@@ -12,7 +14,8 @@ const Brand = ({brand}) => {
           </div>
         </div>
       </div>
-    );
+    </Link>
+  );
 };
 
 export default Brand;

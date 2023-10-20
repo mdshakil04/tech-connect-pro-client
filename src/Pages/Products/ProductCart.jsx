@@ -1,9 +1,12 @@
+/* eslint-disable no-unused-vars */
+/* eslint-disable react/prop-types */
 import React from "react";
+import { Link } from "react-router-dom";
 
 const ProductCart = ({product}) => {
     const {name, brand, type, price, ratting, descriptions, image} = product;
   return (
-    <div className="card card-compact w-96 bg-base-100 shadow-xl">
+    <div className="card card-compact bg-base-100 shadow-xl">
       <figure>
         <img
           src={image}
@@ -11,14 +14,17 @@ const ProductCart = ({product}) => {
         />
       </figure>
       <div className="card-body">
-        <h2 className="card-title">{name}</h2>
-        <h2>{brand}</h2>
+        <h2 className="card-title text-3xl">{name}</h2>
+        <h2 className=" text-xl font-bold">{brand}</h2>
         <p>{type}</p>
-        <p>{price} $</p>
-        <p>{descriptions}</p>
-        <p>{ratting}</p>
+        <p className=" font-bold">Price: <span className=" text-red-700">{price}</span> $</p>
+        <p >Details: {descriptions}</p>
+        <p>Users Ratting: {ratting}</p>
         <div className="card-actions justify-end">
-          <button className="btn btn-primary">Buy Now</button>
+            <button className="btn btn-success">Details</button>
+            <Link to={'/addProducts'}>
+                 <button className="btn btn-primary">Update</button>          
+            </Link>
         </div>
       </div>
     </div>

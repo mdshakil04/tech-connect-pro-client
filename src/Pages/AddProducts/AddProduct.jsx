@@ -35,8 +35,7 @@ const AddProduct = () => {
   return (
     <div >
       <div className=" container bg-slate-800 mx-auto p-8 my-8 rounded-xl">
-            <h2 className="text-4xl text-center text-white font-mono">Add New Product</h2>
-           
+      
         <form onSubmit={handleAddProduct} className="">
           <div className=" grid md:grid-cols-2  gap-4">
             <div className="form-control">

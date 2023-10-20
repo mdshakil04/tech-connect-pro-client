@@ -1,18 +1,15 @@
 import { Link, NavLink } from "react-router-dom";
 import logo2 from "../../assets/images/logo2.png";
-import icon from "../../assets/images/icon.png";
-
-// import { FaUser } from 'react-icons/fa';
-// import { useContext } from "react";
-// import { AuthContext } from "../../../Firebase/AuthProvider";
+import { useContext } from "react";
+import { AuthContext } from "../../Firebase/AuthProvider";
 
 const Navbar = () => {
-//   const {user, logOut} = useContext(AuthContext)
-//   const handleSignOut = () =>{
-//       logOut()
-//         .then()
-//         .catch()
-//   }
+  const {user, logOut} = useContext(AuthContext)
+  const handleSignOut = () =>{
+      logOut()
+        .then()
+        .catch()
+  }
 
   const navLinks = (
     <>
@@ -72,20 +69,19 @@ const Navbar = () => {
       <div className="navbar-end">
         <label tabIndex={0} className="">
           <div className=" ">
-            <Link to='/login'><button className="btn">Login</button></Link>
-            {/* {
+            {
               user && <p>{user.email}</p>
-            } */}
+            }
           </div>
         </label>
-        {/* {
+        {
             user ? 
             <button onClick={handleSignOut} className="btn">Sign Out</button>
             :
             <Link to='/login'>
             <button className="btn">Login</button>
             </Link>
-        } */}
+        }
        
       </div>
     </div>

@@ -1,17 +1,41 @@
 /* eslint-disable no-unused-vars */
 import React, { useContext, useState } from "react";
-// import signup from '../../assets/images/4957136.jpg'
 import { Link } from "react-router-dom";
-// import { AuthContext } from "../../Firebase/AuthProvider";
+import { AuthContext } from "../../../Firebase/AuthProvider";
 const Registration = () => {
+  const [registerError, setRegisterError] = useState('');
+  const [success, setSuccess] = useState('');
 
+  const { createUser } = useContext(AuthContext);
+  const handleRegistration = e =>{
+    e.preventDefault();
+    const form = new FormData(e.currentTarget);
+    // const name = form.get('name');
+    const email = form.get('email');
+    const password = form.get('password');
+
+    console.log( email, password)
+
+    if(password.length < 6){
+      setRegisterError('Password Should Be 6 Characters or Longer');
+      return;
+    }
+    setRegisterError('');
+    setSuccess('');
+    createUser(email, password)
+    .then(result =>{
+      setSuccess('User Created Successfully')
+    })
+    .catch(error =>{
+      setRegisterError(error.message)
+    })
+  }
 
 
   return (
-    <div className=" container mx-auto grid md:grid-cols-2">
-      <div className="card flex-shrink-0 w-full max-w-lg shadow-2xl bg-base-100">
-      {/* onClick={handleRegistration} */}
-        <form  className="card-body">
+    <div className=" container mx-auto">
+      <div className="card w-full max-w-lg lg:ml-72 my-8 shadow-2xl bg-base-100">
+        <form onClick={handleRegistration} className="card-body">
           <div className="form-control">
             <label className="label">
               <span className="label-text">Name</span>
@@ -58,7 +82,7 @@ const Registration = () => {
             </button>
           </div>
         </form>
-        {/* {
+        {
           registerError && <div className="toast toast-top toast-center">
           <div className="alert alert-error">
             <span>{registerError}</span>
@@ -71,10 +95,7 @@ const Registration = () => {
             <span>{success}</span>
           </div>
         </div>
-        } */}
-      </div>
-      <div>
-            {/* <img className=" h-[500px]" src={signup} alt="" /> */}
+        }
       </div>
     </div>
   );

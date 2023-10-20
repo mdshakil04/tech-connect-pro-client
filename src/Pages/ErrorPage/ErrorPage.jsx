@@ -3,8 +3,10 @@ import { Link } from 'react-router-dom';
 
 const ErrorPage = () => {
     return (
-        <div className=' text-center'>
-            {/* <img  src={pnf} alt="" /> */}
+        <div className=' text-center items-center flex flex-col'>
+            <div className=''>
+            <img className=' lg:h-[800px]' src="https://i.ibb.co/HgR1Jvd/21586054-Na-Nov-26.jpg" alt="" />
+            </div>
             <Link to='/'><button className="btn btn-outline btn-secondary font-bold lg:text-xl px-8 mt-4 mb-4">Opps! Go Home </button></Link>
         </div>
     );
