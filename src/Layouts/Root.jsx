@@ -9,9 +9,7 @@ const Root = () => {
         <div className="">
             <Navbar></Navbar>
             <Outlet></Outlet>
-            {/* <SendMessage></SendMessage> */}
             <Footer></Footer>
-
         </div>
     );
 };
