@@ -4,6 +4,7 @@ import { useContext, useEffect, useState } from "react";
 import { AuthContext } from "../../Firebase/AuthProvider";
 
 const Navbar = () => {
+  //----- Dark Theme Implemented-------
   const [theme, setTheme] = useState(localStorage.getItem("theme") ? localStorage.getItem("theme") : "light");
   const handleToggle = (e) => {
     if(e.target.checked){
@@ -17,7 +18,7 @@ const Navbar = () => {
     const localTheme = localStorage.getItem("theme");
     document.querySelector("html").setAttribute("data-theme", localTheme);
   }, [theme]);
-
+// ----------------------------------------------------------------------------------------
   const { user, logOut } = useContext(AuthContext);
   const handleSignOut = () => {
     logOut().then().catch();
@@ -77,7 +78,7 @@ const Navbar = () => {
       <div className="navbar-center hidden lg:flex">
         <ul className="menu menu-horizontal px-1">{navLinks}</ul>
       </div>
-      <div className="navbar-end">
+      <div className="navbar-end ">
         <label tabIndex={0} className="">
           <div className=" ">{user && <p>{user.email}</p>}</div>
         </label>
@@ -90,7 +91,7 @@ const Navbar = () => {
             <button className="btn">Login</button>
           </Link>
         )}
-        <div className=" mr-4">
+        <div className=" mx-4">
           <label className="swap swap-rotate">
             <input 
             onChange={handleToggle}

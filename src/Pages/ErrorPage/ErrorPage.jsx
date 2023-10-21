@@ -7,7 +7,9 @@ const ErrorPage = () => {
             <div className=''>
             <img className=' lg:h-[800px]' src="https://i.ibb.co/HgR1Jvd/21586054-Na-Nov-26.jpg" alt="" />
             </div>
-            <Link to='/'><button className="btn btn-outline btn-secondary font-bold lg:text-xl px-8 mt-4 mb-4">Opps! Go Home </button></Link>
+            <h2 className=" text-4xl text-center">Data is on his way..Please! Reload and Check again</h2>
+            <p className=' text-2xl text-red-700'>or</p>
+            <Link to='/'><button className="btn btn-outline btn-secondary font-bold lg:text-xl px-8 mt-4 mb-4">Go Home </button></Link>
         </div>
     );
 };
