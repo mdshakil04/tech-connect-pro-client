@@ -13,7 +13,7 @@ const AddProduct = () => {
         const newProduct = {name, brand, type, price, ratting, descriptions, image}
         console.log(newProduct);
         // send data to the server
-        fetch('http://localhost:5000/product', {
+        fetch('https://tech-connect-pro-server-jo1olxand-shakils-projects-08aa60f0.vercel.app/product', {
           method: 'POST',
           headers:{
             'content-type':'application/json'
@@ -45,7 +45,7 @@ const AddProduct = () => {
               <input
                 name="name"
                 type="text"
-                placeholder="Enter Coffee Name"
+                placeholder="Enter Product Name"
                 className="input input-bordered"
                 required
               />

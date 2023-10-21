@@ -48,12 +48,12 @@ const routes = createBrowserRouter([
             {
                 path:'/products/:name',
                 element:<Products></Products>,
-                loader: () => fetch('http://localhost:5000/product')
+                loader: () => fetch('https://tech-connect-pro-server-jo1olxand-shakils-projects-08aa60f0.vercel.app/product')
             },
             {
                 path: '/product/:id',
                 element:<PrivateRoute><ProductDetail></ProductDetail></PrivateRoute>,
-                loader: () => fetch('http://localhost:5000/product')
+                loader: () => fetch('https://tech-connect-pro-server-jo1olxand-shakils-projects-08aa60f0.vercel.app/product')
             }
         ]
     }
