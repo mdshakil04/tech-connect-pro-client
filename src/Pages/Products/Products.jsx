@@ -29,7 +29,7 @@ const Products = () => {
             </div>
         </div>
         <h2 className="text-4xl text-center mt-8">Your Desire Products</h2>
-            <div className="container mx-auto  grid md:grid-cols-2  gap-8 my-8">
+            <div className="container mx-auto  grid lg:grid-cols-4 md:grid-cols-2 gap-8 my-8">
                 {
                     products.map(product => <ProductCart
                     key={product._id}

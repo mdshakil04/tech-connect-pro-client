@@ -8,9 +8,9 @@ const ProductCart = ({ product }) => {
     product;
   return (
     <div>
-      <div className="card card-compact bg-base-100 shadow-xl">
+      <div className="card card-compact bg-base-100 shadow-xl lg:h-[550px]">
         <figure>
-          <img src={image} alt="Shoes" />
+          <img className=" " src={image} alt="Shoes" />
         </figure>
         <div className="card-body">
           <h2 className="card-title text-3xl">{name}</h2>

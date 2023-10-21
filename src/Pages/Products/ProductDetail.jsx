@@ -1,3 +1,4 @@
+/* eslint-disable no-unused-vars */
 import React from "react";
 import { useLoaderData, useParams } from "react-router-dom";
 
@@ -9,16 +10,23 @@ const ProductDetail = () => {
 
   return (
     <div>
-      <div className="card md:grid md:grid-cols-2 gap-8 bg-base-100 shadow-xl my-12">
-        <figure>
-          <img className=" w-1/2" src={image} alt="Album" />
-        </figure>
-        <div className="card-body">
-          <h2 className="card-title">{name}</h2>
-          <p>Details: {descriptions}</p>
-          <p>Price: {price} $</p>
-          <p>Ratting: {ratting}</p>
-          <div className="card-actions ">
+      <div className="hero lg:h-[700px] bg-base-200">
+        <div className="hero-content flex-col lg:flex-row">
+          <img
+            src={image}
+            className=" w-1/2 rounded-lg shadow-2xl"
+          />
+          <div>
+            <h1 className="text-5xl font-bold">{name}</h1>
+            <p className="py-6">
+              {descriptions}
+            </p>
+            <p >
+             Price: <span className=" text-red-700 font-bold">{price}</span> $
+            </p>
+            <p className="py-2">
+             User Ratting: {ratting}
+            </p>
             <button className="btn btn-primary">Add to Cart</button>
           </div>
         </div>
